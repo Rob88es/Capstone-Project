@@ -1,0 +1,25 @@
+.image-carousel {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #747070;
+  }
+  
+  .image-carousel .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-carousel .slick-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out; /* Agrega una transición suave */
+  }
+  
+  .image-carousel .slick-slide img[srcset=""] {
+    opacity: 0.3; /* Reduce la opacidad para dar un efecto de gris */
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+  }
