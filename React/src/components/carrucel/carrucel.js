@@ -21,42 +21,44 @@ function ImageCarousel() {
     fetchImages();
   }, []);
 
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
+const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
+    speed: 2000,
     autoplaySpeed: 2000,
-    arrows: false
-  };
+    cssEase: "linear"
+    };
 
 
   return (
-    <div>
+    <div className="slider-container">
       <Slider {...settings}>
-        {images.length > 0 ? (
-          images.map((image, index) => (
-            <div key={index}>
-              <img src={image.url} alt={`Imagen ${index + 1}`} />
-            </div>
-          ))
-        ) : error ? (
-          <div>
-            {/* Mensaje de error personalizado */}
-            <p>Hubo un error al cargar las imágenes. Por favor, inténtalo de nuevo más tarde.</p>
-          </div>
-        ) : (
-          <div>
-            {/* Mensaje de carga o placeholder */}
-            <p>Cargando imágenes...</p>
-          </div>
-        )}
+        <div>
+          <h3>1</h3>
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
       </Slider>
     </div>
   );
 }
+
 
 export default ImageCarousel;
 

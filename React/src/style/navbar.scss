@@ -1,20 +1,50 @@
 .navbar {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   }
   
   .navbar-brand {
     font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+    }
   }
-  
-  .nav-links {
+
+  nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
   }
-  
-  .nav-links li {
-    margin-left: 1rem;
+
+  nav li {
+    margin: 0 1rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+      nav {
+        width: 100%;
+      }
   }

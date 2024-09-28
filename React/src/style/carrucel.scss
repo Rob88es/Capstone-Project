@@ -1,25 +1,70 @@
-.image-carousel {
+.slider-container {
     width: 100%;
     margin: 0 auto;
-    background-color: #747070;
   }
   
-  .image-carousel .slick-slide {
+  /* Contenedor del slider */
+  .slick-slider {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  /* Contenedor de cada slide individual */
+  .slick-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: calc(100% / 5); /* Ajusta el ancho según el número de slides a mostrar */
+    margin: 0 10px; /* Añade margen entre slides */
+    transition: transform 0.5s ease-in-out; /* Añade una transición suave */
   }
   
-  .image-carousel .slick-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out; /* Agrega una transición suave */
+  /* Contenido de cada slide */
+  .slick-slide div {
+    text-align: center;
+    color: #cf8080;
+    font-size: 2em; /* Ajusta el tamaño de fuente */
+    background-color: #333; /* Color de fondo por defecto */
+    padding: 20px;
   }
   
-  .image-carousel .slick-slide img[srcset=""] {
-    opacity: 0.3; /* Reduce la opacidad para dar un efecto de gris */
+  /* Slide activo (el que se muestra actualmente) */
+  .slick-current {
+    transform: scale(1.1); /* Efecto de zoom en el slide activo (opcional) */
+  }
+  
+  /* Flechas de navegación */
+  .slick-prev,
+  .slick-next {
+    display: none; /* Oculta las flechas por defecto */
+  }
+  
+  /* Puntos de navegación (opcional) */
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots   
+   button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
     background-color: #ccc;
-    width: 100%;
-    height: 100%;
+    opacity: 0.5;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .slick-dots button:hover,
+  .slick-dots button.slick-active {
+    background-color: #333;
   }
