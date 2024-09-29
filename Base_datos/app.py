@@ -6,11 +6,14 @@ import models as m
 import schemas as s
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:123456789@localhost:3306/incity'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456789@localhost:3306/incity'
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
 #--------------------Crear Cuenta usuario
+@app.route('/')
+def index():
+    return "Hola! Esta es la página principal."
 
 @app.route('/users', methods=['POST'])
 def create_user():

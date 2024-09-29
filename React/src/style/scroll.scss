@@ -1,0 +1,30 @@
+  /* Contenedor de los posts */
+  .posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Cada post individual */
+  .post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Imagen del post */
+  .post img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Descripción del post */
+  .post p {
+    margin: 10px 0;
+  }
+  
+  /* Spinner de carga (opcional) */
+  .loading {
+    text-align: center;
+    margin-top: 20px;
+  }

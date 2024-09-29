@@ -1,10 +1,10 @@
 import React from "react";
-
+import Scroll from '../componentes/scroll';
 
 function Home() {
   return (
     <div>
-Michi
+      < Scroll />
     </div>
   );
 }

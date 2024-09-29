@@ -1,4 +1,4 @@
-from app import db
+from conect import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -22,7 +22,7 @@ class Evento(db.Model):
     like_count = db.Column(db.Integer, default=0)
     image = db.Column(db.String(255))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    categoria_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+    categoria_id = db.Column(db.Integer, db.ForeignKey('categoria.id'))
 
 class Like(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
